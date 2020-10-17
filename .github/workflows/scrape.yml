@@ -1,0 +1,29 @@
+name: Scrape latest data
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '7,37 * * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out this repo
+      uses: actions/checkout@v2
+    - name: Fetch latest data
+      run: |-
+        curl https://ao.com/product/dis16r10-beko-slimline-dishwasher-silver-58677-24.aspx -O
+        curl https://ao.com/product/rib291f4aw1-hisense-fridge-freezer-white-49808-28.aspx -O
+        curl https://ao.com/product/bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.aspx -O
+        curl https://ao.com/product/i6433c-hisense-induction-hob-black-64113-39.aspx -O
+        tidy -im *.aspx *.html
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
