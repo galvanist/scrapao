@@ -20,7 +20,7 @@ jobs:
         curl https://ao.com/product/rib291f4aw1-hisense-fridge-freezer-white-49808-28.aspx -O
         curl https://ao.com/product/bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.aspx -O
         curl https://ao.com/product/i6433c-hisense-induction-hob-black-64113-39.aspx -O
-        tidy -im *.aspx
+        tidy -im *.aspx || if [ "$?" -eq 1 ]; then exit 0; fi
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
