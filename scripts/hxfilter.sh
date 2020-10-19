@@ -1,0 +1,1 @@
+hxnormalize -x | hxselect 'script#digital-data-product, script#maxymiser'

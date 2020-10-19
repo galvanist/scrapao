@@ -13,14 +13,13 @@ jobs:
     - name: Check out this repo
       uses: actions/checkout@v2
     - name: Install htmltidy
-      run: sudo apt-get install tidy
+      run: sudo apt-get install html-xml-utils
     - name: Fetch latest data
       run: |-
-        curl https://ao.com/product/dis16r10-beko-slimline-dishwasher-silver-58677-24.aspx -O
-        curl https://ao.com/product/rib291f4aw1-hisense-fridge-freezer-white-49808-28.aspx -O
-        curl https://ao.com/product/bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.aspx -O
-        curl https://ao.com/product/i6433c-hisense-induction-hob-black-64113-39.aspx -O
-        tidy -im *.aspx || if [ "$?" -eq 1 ]; then exit 0; fi
+        curl https://ao.com/product/dis16r10-beko-slimline-dishwasher-silver-58677-24.aspx | ./scripts/hxfilter.sh > dis16r10-beko-slimline-dishwasher-silver-58677-24.html
+        curl https://ao.com/product/rib291f4aw1-hisense-fridge-freezer-white-49808-28.aspx | ./scripts/hxfilter.sh > rib291f4aw1-hisense-fridge-freezer-white-49808-28.html
+        curl https://ao.com/product/bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.aspx | ./scripts/hxfilter.sh > bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.html
+        curl https://ao.com/product/i6433c-hisense-induction-hob-black-64113-39.aspx | ./scripts/hxfilter.sh > i6433c-hisense-induction-hob-black-64113-39.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
