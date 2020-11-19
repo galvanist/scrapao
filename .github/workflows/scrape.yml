@@ -20,6 +20,7 @@ jobs:
         curl https://ao.com/product/rib291f4aw1-hisense-fridge-freezer-white-49808-28.aspx | ./scripts/hxfilter.sh > rib291f4aw1-hisense-fridge-freezer-white-49808-28.html
         curl https://ao.com/product/bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.aspx | ./scripts/hxfilter.sh > bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.html
         curl https://ao.com/product/i6433c-hisense-induction-hob-black-64113-39.aspx | ./scripts/hxfilter.sh > i6433c-hisense-induction-hob-black-64113-39.html
+        curl https://ao.com/product/s6003uk-shark-klik-n-flip-steam-mop-grey-56433-61.aspx | ./scripts/hxfilter.sh > s6003uk-shark-klik-n-flip-steam-mop-grey-56433-61.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
