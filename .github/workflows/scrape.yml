@@ -21,6 +21,16 @@ jobs:
         curl https://ao.com/product/bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.aspx | ./scripts/hxfilter.sh > bi5228pxuk-hisense-electric-single-oven-stainless-steel-71422-45.html
         curl https://ao.com/product/i6433c-hisense-induction-hob-black-64113-39.aspx | ./scripts/hxfilter.sh > i6433c-hisense-induction-hob-black-64113-39.html
         curl https://ao.com/product/s6003uk-shark-klik-n-flip-steam-mop-grey-56433-61.aspx | ./scripts/hxfilter.sh > s6003uk-shark-klik-n-flip-steam-mop-grey-56433-61.html
+        curl https://ao.com/product/220029-morphy-richards-dune-toaster-white-66154-79.aspx | ./scripts/hxfilter.sh > 220029-morphy-richards-dune-toaster-white-66154-79.html
+        curl https://ao.com/product/108269-morphy-richards-dune-kettle-white-66161-78.aspx | ./scripts/hxfilter.sh > 108269-morphy-richards-dune-kettle-white-66161-78.html
+        curl https://ao.com/product/ww90ta046ae-samsung-ecobubble-washing-machine-white-76974-1.aspx | ./scripts/hxfilter.sh > ww90ta046ae.html
+        curl https://ao.com/product/ww80ta046ae-samsung-ecobubble-washing-machine-white-76956-1.aspx | ./scripts/hxfilter.sh > ww80ta046ae.html
+        curl https://ao.com/product/ww90t554daw-samsung-addwash-ecobubble-washing-machine-white-76964-1.aspx | ./scripts/hxfilter.sh > ww90t554daw.html
+        curl https://ao.com/product/ww90t684dlh-samsung-addwash-autodose-washing-machine-white-76966-1.aspx | ./scripts/hxfilter.sh > ww90t684dlh.html
+        curl https://ao.com/product/ww90t534daw-samsung-autodose-washing-machine-white-76960-1.aspx | ./scripts/hxfilter.sh > ww90t534daw.html
+        curl https://ao.com/product/hw90b14636-haier-washing-machine-white-76646-1.aspx | ./scripts/hxfilter.sh > hw90b14636.html
+        curl https://ao.com/product/hw80b14636-haier-hatrium-washing-machine-white-50642-1.aspx | ./scripts/hxfilter.sh > hw80b14636.html
+        curl https://ao.com/product/hw80b14876-haier-washing-machine-white-72739-1.aspx | ./scripts/hxfilter.sh > hw80b14876.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
