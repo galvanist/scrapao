@@ -28,9 +28,6 @@ jobs:
         curl https://ao.com/product/ww90t554daw-samsung-addwash-ecobubble-washing-machine-white-76964-1.aspx | ./scripts/hxfilter.sh > ww90t554daw.html
         curl https://ao.com/product/ww90t684dlh-samsung-addwash-autodose-washing-machine-white-76966-1.aspx | ./scripts/hxfilter.sh > ww90t684dlh.html
         curl https://ao.com/product/ww90t534daw-samsung-autodose-washing-machine-white-76960-1.aspx | ./scripts/hxfilter.sh > ww90t534daw.html
-        curl https://ao.com/product/hw90b14636-haier-washing-machine-white-76646-1.aspx | ./scripts/hxfilter.sh > hw90b14636.html
-        curl https://ao.com/product/hw80b14636-haier-hatrium-washing-machine-white-50642-1.aspx | ./scripts/hxfilter.sh > hw80b14636.html
-        curl https://ao.com/product/hw80b14876-haier-washing-machine-white-72739-1.aspx | ./scripts/hxfilter.sh > hw80b14876.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
